@@ -227,8 +227,12 @@ plt.show()
 ![png](output_10_0.png)
 
 
+    /home/manoj/.conda/envs/tfcpu/lib/python3.6/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+      'be changed to `L2-Hys` in v0.15', skimage_deprecation)
 
-![png](output_10_1.png)
+
+
+![png](output_10_2.png)
 
 
 # Rubric 3: Training the classifier
@@ -307,8 +311,8 @@ t=time.time()
 
     Using: 9 orientations 8 pixels per cell and 2 cells per block
     Feature vector length: 6156
-    14.37 Seconds to train SVC...
-    Test Accuracy of SVC =  0.9924
+    12.95 Seconds to train SVC...
+    Test Accuracy of SVC =  0.991
 
 
 # Rubric 4: Sliding Window
@@ -490,7 +494,7 @@ for i_image in images:
 
     window_img = draw_boxes(draw_image, hot_windows, color=(0, 0, 255), thick=6)                    
 
-    plt.figure(fisize = (10,6))
+    plt.figure(figsize = (10,6))
     plt.title(i_image.split('/')[2])
     plt.imshow(window_img)
 
@@ -746,7 +750,8 @@ plt.title('Heat Map')
 fig.tight_layout()
 ```
 
-    2
+    /home/manoj/.conda/envs/tfcpu/lib/python3.6/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+      'be changed to `L2-Hys` in v0.15', skimage_deprecation)
 
 
 
@@ -839,19 +844,14 @@ processedVideo = clip.fl_image(detectVehicles)
     [MoviePy] Writing video vehiclesDetectedVideo.mp4
 
 
-    
-      0%|          | 0/1261 [00:00<?, ?it/s][A
-      0%|          | 1/1261 [00:01<21:50,  1.04s/it][A
-      0%|          | 2/1261 [00:02<21:29,  1.02s/it][A
-      0%|          | 3/1261 [00:02<21:06,  1.01s/it][A
-    100%|█████████▉| 1260/1261 [21:21<00:00,  1.00it/s]
+    100%|█████████▉| 1260/1261 [21:32<00:01,  1.03s/it]
 
 
     [MoviePy] Done.
     [MoviePy] >>>> Video ready: vehiclesDetectedVideo.mp4 
     
-    CPU times: user 2h 25min 4s, sys: 3min 32s, total: 2h 28min 36s
-    Wall time: 21min 22s
+    CPU times: user 2h 29min 27s, sys: 3min 32s, total: 2h 33min
+    Wall time: 21min 33s
 
 
 # Rubric 8: Discussion
